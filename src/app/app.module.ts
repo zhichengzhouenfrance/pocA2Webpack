@@ -11,6 +11,7 @@ import { LayoutRoutingModule } from './layouts/layout-routing.module';
 import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app.route';
+import { PageNotFoundComponent }   from './not-found.component';
 
 @NgModule({
   imports:      [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from './app.route';
       AppRoutingModule
   ],
   declarations: [
-      AsapMainComponent
+      AsapMainComponent,
+      PageNotFoundComponent
   ],
   bootstrap:    [ AsapMainComponent ]
 })

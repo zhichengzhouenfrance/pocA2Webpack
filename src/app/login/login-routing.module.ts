@@ -4,14 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent }    from './login.component';
 
 export const LOGIN_ROUTE: Routes = [{
-    path: 'login',
+    path: '',
     component: LoginComponent
 }];
 
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(LOGIN_ROUTE)
+        RouterModule.forChild(LOGIN_ROUTE)
     ],
     exports: [
         RouterModule

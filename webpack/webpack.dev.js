@@ -18,6 +18,7 @@ module.exports = webpackMerge(commonConfig({ env: ENV }), {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './target/www',
+        historyApiFallback: true,
         proxy: [{
             context: [
                 '/api',

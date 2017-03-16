@@ -8,7 +8,8 @@ import { LoginRoutingModule } from './login-routing.module';
 
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        LoginRoutingModule
     ],
     declarations: [
         LoginComponent

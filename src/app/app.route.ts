@@ -2,12 +2,13 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
+import { PageNotFoundComponent }    from './not-found.component';
 
 const appRoutes: Routes = [
     {
         path: 'login',
-        component: LoginComponent
-    }
+        loadChildren: 'login.module#LoginRoutingModule'
+    },
     //{
     //    path: 'compose',
     //    component: ComposeMessageComponent,
@@ -24,7 +25,7 @@ const appRoutes: Routes = [
     //    data: { preload: true }
     //},
     //{ path: '',   redirectTo: '/heroes', pathMatch: 'full' },
-    //{ path: '**', component: PageNotFoundComponent }
+    { path: '**', loadChildren: 'login.module#LoginRoutingModule' }
 ];
 
 @NgModule({
